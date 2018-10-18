@@ -4,7 +4,7 @@
 <head>
         <h1><p id="p2">BMI Calculator</p></h1>
         <script>
-        document.getElementById("p2").style.color = "blue";
+        document.getElementById("p2").style.color = "purple";
         </script>
     <meta charset="utf-8">
     <title></title>
@@ -17,10 +17,12 @@
     <form id="calculate">
         <div id="metric-inputs">
             <input type="text" id="weight-in-kgs" placeholder="Weight">
+            <br>
             <input type="text" id="height-in-cm" placeholder="Height">
+            
         </div>
 
-        <button type="submit" value="Calculate"> Calculate </button>
+        <button style="background-color:rgb(179, 84, 220)" type="submit"> Calculate </button>
     </form>
     <div>
         <span id="display_value"></span>
