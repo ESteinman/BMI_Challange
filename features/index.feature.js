@@ -25,4 +25,13 @@ describe('User can calculate BMI', () => {
         let content = await browser.getContent("span[id='display_value']")
         expect(content).to.eql('Your BMI is 27.76');
     });
+    it('by inputing his weight and height', async () => {
+
+        await browser.fillIn("input[id='weight-in-lbs']", { with: "95" })
+        await browser.fillIn("input[id='height-in-inches']", { with: "185" })
+
+        await browser.clickOnButton("button")
+        let content = await browser.getContent("span[id='display_value']")
+        expect(content).to.eql('Your BMI is 27.76');
+    });
 });
