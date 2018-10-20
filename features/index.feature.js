@@ -34,4 +34,18 @@ describe('User can calculate BMI', () => {
         let content = await browser.getContent("span[id='display_value']")
         expect(content).to.eql('Your BMI is 27.76');
     });
+
+    describe('user can calculate BMI with impreial method', () => {
+        before(async () => {
+            await browser.init()
+            await browser.visitPage('http://localhost:8080/')
+        });
+    
+        beforeEach(async () => {
+            await browser.page.reload();
+        });
+    
+        after(async () => {
+            await browser.close();
+        });
 });
